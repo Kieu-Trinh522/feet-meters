@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Feet</p><input type="number" id="foot1" oninput="Meter()">
+<p>Ket qua <span id="kq"></span></p>
+<br/>
+<br/>
+<p>Meters</p><input type="number" id="met" oninput="Foot()">
+<p>Ket qua<span id="kq1"></span></p>
+<script>
+    function footToMeter(foot) {
+        let  meter = 0.305 * foot;
+        return meter;
+    }
+    function meterToFoot(meter) {
+        let foot = 3.279 * meter;
+        return foot;
+    }
+
+
+
+    function Meter() {
+        let num=document.getElementById('foot1').value;
+        let a= footToMeter(num);
+        document.getElementById('kq').innerHTML=a;
+        
+    }
+    function Foot() {
+        let num1=document.getElementById('met').value;
+        let a1= meterToFoot(num1);
+        document.getElementById('kq1').innerHTML=a1;
+
+    }
+
+</script>
+
+</body>
+</html>
